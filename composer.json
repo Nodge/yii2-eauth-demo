@@ -1,0 +1,35 @@
+{
+	"name": "nodge/yii2-eauth-demo",
+	"description": "Demo site for Yii 2 EAuth extension",
+	"keywords": ["yii", "framework", "demo", "eauth"],
+	"homepage": "https://github.com/Nodge/yii2-eauth",
+	"type": "project",
+	"license": "New BSD License",
+	"authors": [
+		{
+			"name": "Maxim Zemskov",
+			"email": "nodge@yandex.ru",
+			"homepage": "http://nodge.ru/"
+		}
+	],
+	"require": {
+		"php": ">=5.3.0",
+		"yiisoft/yii2": "dev-master",
+		"yiisoft/yii2-composer": "dev-master",
+		"nodge/yii2-eauth": "dev-master"
+	},
+	"scripts": {
+		"post-create-project-cmd": [
+			"yii\\composer\\InstallHandler::setPermissions"
+		]
+	},
+	"extra": {
+		"yii-install-writable": [
+			"runtime",
+			"web/assets"
+		],
+		"yii-install-executable": [
+			"yii"
+		]
+	}
+}
