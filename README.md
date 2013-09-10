@@ -1,77 +1,21 @@
-Yii 2 Basic Application Template
-================================
+Yii2 EAuth demo project
+=======================
 
-**NOTE** Yii 2 and the relevant applications and extensions are still under heavy
-development. We may make significant changes without prior notices. Please do not
-use them for production. Please consider using [Yii v1.1](https://github.com/yiisoft/yii)
-if you have a project to be deployed for production soon.
+EAuth extension allows to authenticate users with accounts on other websites.
+Supported protocols: OpenID, OAuth 1.0 and OAuth 2.0.
 
+EAuth is a extension for provide a unified (does not depend on the selected service) method to authenticate the user. So, the extension itself does not perform login, does not register the user and does not bind the user accounts from different providers.
 
-Thank you for using Yii 2 Basic Application Template - an application template
-that works out-of-box and can be easily customized to fit for your needs.
-
-Yii 2 Basic Application Template is best suitable for small Websites which mainly contain
-a few informational pages.
+* [Online Demo](http://nodge.ru/yii-eauth/demo2/)
+* [Extension project](https://github.com/Nodge/yii2-eauth/)
+* [Version for yii 1.1](https://github.com/Nodge/yii-eauth-demo/)
 
 
-DIRECTORY STRUCTURE
--------------------
+## Extension
 
-      commands/           contains console commands (controllers)
-      config/             contains application configurations
-      controllers/        contains Web controller classes
-      models/             contains model classes
-      runtime/            contains files generated during runtime
-      vendor/             contains dependent 3rd-party packages
-      views/              contains view files for the Web application
-      web/                contains the entry script and Web resources
+For more details see [yii2-eauth](https://github.com/Nodge/yii2-eauth) project.
 
 
+## License
 
-REQUIREMENTS
-------------
-
-The minimum requirement by Yii is that your Web server supports PHP 5.3.?.
-
-In order for captcha to work you need either GD2 extension or ImageMagick PHP extension.
-
-INSTALLATION
-------------
-
-### Install via Composer
-
-If you do not have [Composer](http://getcomposer.org/), you may download it from
-[http://getcomposer.org/](http://getcomposer.org/) or run the following command on Linux/Unix/MacOS:
-
-~~~
-curl -s http://getcomposer.org/installer | php
-~~~
-
-You can then install the Bootstrap Application using the following command:
-
-~~~
-php composer.phar create-project --stability=dev yiisoft/yii2-app-basic yii-basic
-~~~
-
-Now you should be able to access the application using the URL `http://localhost/yii-basic/web/`,
-assuming `yii-basic` is directly under the document root of your Web server.
-
-
-### Install from an Archive File
-
-This is not currently available. We will provide it when Yii 2 is formally released.
-
-
-### Install from development repository
-
-If you've cloned the [Yii 2 framework main development repository](https://github.com/yiisoft/yii2) you
-can bootstrap your application with:
-
-~~~
-cd yii2/apps/basic
-php composer.phar create-project
-~~~
-
-*Note: If the above command fails with `[RuntimeException] Not enough arguments.` run
-`php composer.phar self-update` to obtain an updated version of composer which supports creating projects
-from local packages.*
+The extension was released under the [New BSD License](http://www.opensource.org/licenses/bsd-license.php), so you'll find the latest version on [GitHub](https://github.com/Nodge/yii2-eauth-demo).
