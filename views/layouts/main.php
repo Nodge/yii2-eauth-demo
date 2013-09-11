@@ -68,31 +68,11 @@ app\config\AppAsset::register($this);
 	</div>
   </footer>
 
-  <!-- Yandex.Metrika counter -->
-  <script type="text/javascript">
-	  (function (d, w, c) {
-		  (w[c] = w[c] || []).push(function() {
-			  try {
-				  w.yaCounter22228888 = new Ya.Metrika({id:22228888,
-					  trackLinks:true,
-					  accurateTrackBounce:true});
-			  } catch(e) { }
-		  });
-
-		  var n = d.getElementsByTagName("script")[0],
-			  s = d.createElement("script"),
-			  f = function () { n.parentNode.insertBefore(s, n); };
-		  s.type = "text/javascript";
-		  s.async = true;
-		  s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
-
-		  if (w.opera == "[object Opera]") {
-			  d.addEventListener("DOMContentLoaded", f, false);
-		  } else { f(); }
-	  })(document, window, "yandex_metrika_callbacks");
-  </script>
-  <noscript><div><img src="//mc.yandex.ru/watch/22228888" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-  <!-- /Yandex.Metrika counter -->
+  <?php
+  	if (file_exists(__DIR__.'/_main_analytics.php')) {
+		require '_main_analytics.php';
+	}
+  ?>
 
 <?php $this->endBody(); ?>
 </body>

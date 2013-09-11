@@ -2,3 +2,4 @@
 /vendor*
 .idea
 /config/web-local.php
+/views/layouts/_main_analytics.php
