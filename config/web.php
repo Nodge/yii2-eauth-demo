@@ -1,22 +1,5 @@
 <?php
 
-$eauthServices = array(
-	'google',
-	'google_oauth',
-	'yandex',
-	'yandex_oauth',
-	'twitter',
-	'linkedin',
-	'linkedin_oauth2',
-	'yahoo',
-	'vkontakte',
-	'facebook',
-	'mailru',
-	'odnoklassniki',
-	'github',
-	'live',
-);
-
 $config = array(
 	'id' => 'bootstrap',
 	'name' => 'Yii2 EAuth extension demo',
@@ -145,7 +128,6 @@ $config = array(
 			'showScriptName' => false,
 			'rules' => array(
 				'' => 'site/index',
-				'login/<service:('.implode('|', $eauthServices).')>' => 'site/login',
 				'login' => 'site/login',
 				'logout' => 'site/logout',
 			),
@@ -175,5 +157,11 @@ if (file_exists(__DIR__.'/web-local.php')) {
 	$localConfig = require 'web-local.php';
 	$config = \yii\helpers\ArrayHelper::merge($config, $localConfig);
 }
+
+$eauthServices = array_keys($config['components']['eauth']['services']);
+array_unshift($config['components']['urlManager']['rules'], array(
+	'route' => 'site/login',
+	'pattern' => 'login/<service:('.implode('|', $eauthServices).')>',
+));
 
 return $config;
