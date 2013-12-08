@@ -12,10 +12,13 @@
 			"homepage": "http://nodge.ru/"
 		}
 	],
+	"minimum-stability": "dev",
 	"require": {
-		"php": ">=5.3.0",
-		"yiisoft/yii2": "dev-master",
-		"yiisoft/yii2-composer": "dev-master",
+		"php": ">=5.4.0",
+		"yiisoft/yii2": "*",
+		"yiisoft/yii2-bootstrap": "*",
+		"yiisoft/yii2-debug": "*",
+		"yiisoft/yii2-gii": "*",
 		"nodge/yii2-eauth": "dev-master"
 	},
 	"scripts": {
@@ -24,11 +27,11 @@
 		]
 	},
 	"extra": {
-		"yii-install-writable": [
+		"writable": [
 			"runtime",
 			"web/assets"
 		],
-		"yii-install-executable": [
+		"executable": [
 			"yii"
 		]
 	}

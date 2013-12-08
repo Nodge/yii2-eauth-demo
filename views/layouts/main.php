@@ -6,14 +6,14 @@ use yii\widgets\Breadcrumbs;
 use yii\helpers\VarDumper;
 
 /**
- * @var $this \yii\base\View
- * @var $content string
+ * @var \yii\web\View $this
+ * @var string $content
  */
-app\config\AppAsset::register($this);
+app\assets\AppAsset::register($this);
 ?>
 <?php $this->beginPage(); ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="<?= Yii::$app->language ?>">
 <head>
 	<meta charset="<?php echo Yii::$app->charset; ?>"/>
 	<title><?php echo Html::encode($this->title); ?></title>

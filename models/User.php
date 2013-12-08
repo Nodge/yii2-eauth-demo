@@ -5,7 +5,7 @@ namespace app\models;
 use Yii;
 use \yii\base\ErrorException;
 
-class User extends \yii\base\Object implements \yii\web\Identity
+class User extends \yii\base\Object implements \yii\web\IdentityInterface
 {
 	public $id;
 	public $username;
@@ -53,7 +53,7 @@ class User extends \yii\base\Object implements \yii\web\Identity
 	}
 
 	/**
-	 * @param \yii\eauth\ServiceBase $service
+	 * @param \yii2eauth\ServiceBase $service
 	 * @return User
 	 * @throws ErrorException
 	 */

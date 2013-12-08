@@ -1,4 +1,5 @@
 /composer.lock
+/composer-local.json
 /vendor*
 .idea
 /config/web-local.php

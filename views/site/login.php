@@ -4,7 +4,7 @@ use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 
 /**
- * @var yii\base\View $this
+ * @var yii\web\View $this
  * @var yii\widgets\ActiveForm $form
  * @var app\models\LoginForm $model
  */
@@ -20,7 +20,7 @@ $this->params['breadcrumbs'][] = $this->title;
 ?>
 
 <p class="lead">Do you already have an account on one of these sites? Click the logo to log in with it here:</p>
-<?php echo \yii\eauth\Widget::widget(array('action' => 'site/login')); ?>
+<?php echo \yii2eauth\Widget::widget(array('action' => 'site/login')); ?>
 <hr/>
 
 <p>Please fill out the following fields to login:</p>
