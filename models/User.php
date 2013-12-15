@@ -53,7 +53,7 @@ class User extends \yii\base\Object implements \yii\web\IdentityInterface
 	}
 
 	/**
-	 * @param \yii2eauth\ServiceBase $service
+	 * @param \nodge\eauth\ServiceBase $service
 	 * @return User
 	 * @throws ErrorException
 	 */

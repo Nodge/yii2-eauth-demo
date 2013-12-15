@@ -46,7 +46,7 @@ class SiteController extends Controller
 	{
 		$serviceName = Yii::$app->getRequest()->get('service');
 		if (isset($serviceName)) {
-			/** @var $eauth \yii2eauth\ServiceBase */
+			/** @var $eauth \nodge\eauth\ServiceBase */
 			$eauth = Yii::$app->getComponent('eauth')->getIdentity($serviceName);
 			$eauth->setRedirectUrl(Yii::$app->getUser()->getReturnUrl());
 			$eauth->setCancelUrl(Yii::$app->getUrlManager()->createAbsoluteUrl('site/login'));
@@ -66,7 +66,7 @@ class SiteController extends Controller
 					$eauth->cancel();
 				}
 			}
-			catch (\yii2eauth\ErrorException $e) {
+			catch (\nodge\eauth\ErrorException $e) {
 				// save error to show it later
 				Yii::$app->getSession()->setFlash('error', 'EAuthException: '.$e->getMessage());
 

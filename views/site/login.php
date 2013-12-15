@@ -20,7 +20,7 @@ $this->params['breadcrumbs'][] = $this->title;
 ?>
 
 <p class="lead">Do you already have an account on one of these sites? Click the logo to log in with it here:</p>
-<?php echo \yii2eauth\Widget::widget(array('action' => 'site/login')); ?>
+<?php echo \nodge\eauth\Widget::widget(array('action' => 'site/login')); ?>
 <hr/>
 
 <p>Please fill out the following fields to login:</p>
