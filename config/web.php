@@ -88,6 +88,9 @@ $config = array(
 					'clientId' => '...',
 					'clientSecret' => '...',
 				),
+				'steam' => array(
+					'class' => 'nodge\eauth\services\SteamOpenIDService',
+				),
 				'yandex' => array(
 					'class' => 'nodge\eauth\services\YandexOpenIDService',
 					//'realm' => '*.example.org', // your domain, can be with wildcard to authenticate on subdomains.
