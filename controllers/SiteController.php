@@ -26,7 +26,7 @@ class SiteController extends Controller
 				'rules' => array(
 					array(
 						'allow' => true,
-						'roles' => array('?'),
+//						'roles' => array('?'),
 					),
 					array(
 						'allow' => false,
