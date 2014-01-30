@@ -49,7 +49,7 @@ class SiteController extends Controller
 
 	public function actionLogin()
 	{
-		$serviceName = Yii::$app->getRequest()->get('service');
+		$serviceName = Yii::$app->getRequest()->getQueryParam('service');
 		if (isset($serviceName)) {
 			/** @var $eauth \nodge\eauth\ServiceBase */
 			$eauth = Yii::$app->getComponent('eauth')->getIdentity($serviceName);
