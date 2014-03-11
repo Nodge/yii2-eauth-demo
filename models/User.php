@@ -4,6 +4,7 @@ namespace app\models;
 
 use Yii;
 use \yii\base\ErrorException;
+use yii\web\IdentityInterface;
 
 class User extends \yii\base\Object implements \yii\web\IdentityInterface
 {
@@ -74,23 +75,32 @@ class User extends \yii\base\Object implements \yii\web\IdentityInterface
 		return new self($attributes);
 	}
 
-	public function getId()
-	{
+	public function getId() {
 		return $this->id;
 	}
 
-	public function getAuthKey()
-	{
+	public function getAuthKey() {
 		return $this->authKey;
 	}
 
-	public function validateAuthKey($authKey)
-	{
+	public function validateAuthKey($authKey) {
 		return $this->authKey === $authKey;
 	}
 
-	public function validatePassword($password)
-	{
+	public function validatePassword($password) {
 		return $this->password === $password;
+	}
+
+	/**
+	 * Finds an identity by the given secrete token.
+	 *
+	 * @param string $token the secrete token
+	 * @return IdentityInterface the identity object that matches the given token.
+	 * Null should be returned if such an identity cannot be found
+	 * or the identity is not in an active state (disabled, deleted, etc.)
+	 */
+	public static function findIdentityByAccessToken($token) {
+		// TODO: Implement findIdentityByAccessToken() method.
+		return null;
 	}
 }

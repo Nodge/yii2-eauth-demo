@@ -1,6 +1,7 @@
 <?php
 
 use \yii\helpers\Html;
+use \yii\helpers\Url;
 
 /**
  * @var yii\base\View $this
@@ -18,8 +19,8 @@ $this->title = \Yii::$app->name;
 	<a class="btn btn-lg btn-primary" href="https://github.com/Nodge/yii2-eauth/blob/master/README.md">Get started with EAuth</a>
 	&nbsp; &nbsp;
 	<?php if (Yii::$app->getUser()->isGuest) : ?>
-	  <a class="btn btn-lg btn-success" href="<?php echo Html::url(array('site/login')); ?>">Login (demo)</a>
+	  <a class="btn btn-lg btn-success" href="<?php echo Url::to(array('site/login')); ?>">Login (demo)</a>
 	<?php else : ?>
-	  <a class="btn btn-lg btn-success" href="<?php echo Html::url(array('site/logout')); ?>">Logout</a>
+	  <a class="btn btn-lg btn-success" href="<?php echo Url::to(array('site/logout')); ?>">Logout</a>
 	<?php endif; ?>
 </div>
