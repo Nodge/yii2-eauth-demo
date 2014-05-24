@@ -95,11 +95,12 @@ class User extends \yii\base\Object implements \yii\web\IdentityInterface
 	 * Finds an identity by the given secrete token.
 	 *
 	 * @param string $token the secrete token
+	 * @param null $type type of $token
 	 * @return IdentityInterface the identity object that matches the given token.
 	 * Null should be returned if such an identity cannot be found
 	 * or the identity is not in an active state (disabled, deleted, etc.)
 	 */
-	public static function findIdentityByAccessToken($token) {
+	public static function findIdentityByAccessToken($token, $type = null) {
 		// TODO: Implement findIdentityByAccessToken() method.
 		return null;
 	}
