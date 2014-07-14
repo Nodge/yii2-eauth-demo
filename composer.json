@@ -19,7 +19,7 @@
 		"yiisoft/yii2-bootstrap": "*",
 		"yiisoft/yii2-debug": "*",
 		"yiisoft/yii2-gii": "*",
-		"nodge/yii2-eauth": "dev-master"
+		"nodge/yii2-eauth": "*"
 	},
 	"scripts": {
 		"post-create-project-cmd": [
