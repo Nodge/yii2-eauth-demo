@@ -4,6 +4,7 @@ namespace app\controllers;
 
 use Yii;
 use app\models\User;
+use yii\filters\AccessControl;
 use yii\web\Controller;
 use app\models\LoginForm;
 
@@ -21,7 +22,7 @@ class SiteController extends Controller
 	public function behaviors() {
 		return array(
 			'access' => array(
-				'class' => \yii\web\AccessControl::className(),
+				'class' => AccessControl::className(),
 				'only' => array('login'),
 				'rules' => array(
 					array(
