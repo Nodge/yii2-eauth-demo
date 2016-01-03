@@ -36,16 +36,12 @@ $config = array(
 //				'class' => '@app\eauth\DatabaseTokenStorage',
 //			),
 			'services' => array(
-				'google' => array(
-					'class' => 'nodge\eauth\services\GoogleOpenIDService',
-					//'realm' => '*.example.org', // your domain, can be with wildcard to authenticate on subdomains.
-				),
 				'google_oauth' => array(
 					// register your app here: https://code.google.com/apis/console/
 					'class' => 'nodge\eauth\services\GoogleOAuth2Service',
 					'clientId' => '...',
 					'clientSecret' => '...',
-					'title' => 'Google (OAuth)',
+					'title' => 'Google',
 				),
 				'facebook' => array(
 					// register your app here: https://developers.facebook.com/apps/
@@ -91,16 +87,12 @@ $config = array(
 				'steam' => array(
 					'class' => 'nodge\eauth\services\SteamOpenIDService',
 				),
-				'yandex' => array(
-					'class' => 'nodge\eauth\services\YandexOpenIDService',
-					//'realm' => '*.example.org', // your domain, can be with wildcard to authenticate on subdomains.
-				),
 				'yandex_oauth' => array(
 					// register your app here: https://oauth.yandex.ru/client/my
 					'class' => 'nodge\eauth\services\YandexOAuth2Service',
 					'clientId' => '...',
 					'clientSecret' => '...',
-					'title' => 'Yandex (OAuth)',
+					'title' => 'Yandex',
 				),
 				'vkontakte' => array(
 					// register your app here: https://vk.com/editapp?act=create&site=1
